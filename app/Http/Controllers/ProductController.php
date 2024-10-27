@@ -32,7 +32,7 @@ class ProductController extends Controller
             'title'         => 'required|min:1',
             'description'   => 'required|min:1',
             'price'         => 'required|numeric',
-            'stock'         => 'required|numeric'
+            'stock'         => 'required|integer|min:0'
         ]);
 
         $image = $request->file('image');
@@ -95,7 +95,7 @@ class ProductController extends Controller
             'title'         => 'required|min:1',
             'description'   => 'required|min:1',
             'price'         => 'required|numeric',
-            'stock'         => 'required|numeric'
+            'stock'         => 'required|integer|min:0'
         ]);
 
         //get product by ID

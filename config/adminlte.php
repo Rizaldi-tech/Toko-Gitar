@@ -331,20 +331,9 @@ return [
             'icon' => 'fas fa-boxes',
             'submenu' => [
                 [
-                    'text' => 'Data Produk',
-                    'url' => 'products',
+                    'text' => 'Data Jam',
+                    'url' => 'Jams',
                     'icon' => 'fas fa-list',
-                ],
-                [
-                    'text' => 'Transaksi',
-                    'url' => 'transaksis',
-                    'icon' => 'fas fa-file-alt',
-                ],
-                
-                [
-                    'text' => 'Laporan',
-                    'url'  => 'laporans',
-                    'icon' => 'fas fa-file-alt',
                 ],
             ],
         ],
