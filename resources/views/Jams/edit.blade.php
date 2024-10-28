@@ -4,7 +4,6 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <Nama>Edit Jam</Nama>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
 </head>
 <body style="background: lightgray">
@@ -73,10 +72,10 @@
                                 <div class="col-md-6">
                                     <div class="form-group mb-3">
                                         <label class="font-weight-bold">Stok</label>
-                                        <input type="number" class="form-control @error('stock') is-invalid @enderror" name="stock" value="{{ old('stock', $Jam->stock) }}" placeholder="Masukkan Stok Produk">
+                                        <input type="number" class="form-control @error('Stok') is-invalid @enderror" name="Stok" value="{{ old('Stok', $Jam->Stok) }}" placeholder="Masukkan Stok Produk">
                                     
-                                        <!-- error message untuk stock -->
-                                        @error('stock')
+                                        <!-- error message untuk Stok -->
+                                        @error('Stok')
                                             <div class="alert alert-danger mt-2">
                                                 {{ $message }}
                                             </div>

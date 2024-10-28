@@ -34,9 +34,9 @@
                             <td>{{ "Rp " . number_format($Jam->Harga,2,',','.') }}</td>
                             <td>{{ $Jam->Stok }}</td>
                             <td class="text-center">
-                                <form onsubmit="return confirm('Apakah Anda Yakin ?');" action="{{ route('Jam.destroy', $Jam->id) }}" method="POST">
-                                    <a href="{{ route('Jam.show', $Jam->id) }}" class="btn btn-sm btn-dark">Lihat</a>
-                                    <a href="{{ route('Jam.edit', $Jam->id) }}" class="btn btn-sm btn-primary">Edit</a>
+                                <form onsubmit="return confirm('Apakah Anda Yakin ?');" action="{{ route('Jams.destroy', $Jam->id) }}" method="POST">
+                                    <a href="{{ route('Jams.show', $Jam->id) }}" class="btn btn-sm btn-dark">Lihat</a>
+                                    <a href="{{ route('Jams.edit', $Jam->id) }}" class="btn btn-sm btn-primary">Edit</a>
                                     @csrf
                                     @method('DELETE')
                                     <button type="submit" class="btn btn-sm btn-danger" onclick="return confirm('Apakah Anda yakin ingin menghapus produk ini?');">Hapus</button>

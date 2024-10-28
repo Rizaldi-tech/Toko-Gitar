@@ -38,7 +38,7 @@
                                 @forelse ($Jams as $Jam)
                                     <tr>
                                         <td class="text-center">
-                                            <img src="{{ asset('storage/'.$Jam->Gambar) }}" class="rounded" style="width: 150px">
+                                        <img src="{{ asset('storage/jams/' . $Jam->Gambar) }}" alt="{{ $Jam->Nama }}" style="max-width: 200px;">
                                         </td>
                                         <td>{{ $Jam->Nama }}</td>
                                         <td>{{ "Rp " . number_format($Jam->Harga,2,',','.') }}</td>

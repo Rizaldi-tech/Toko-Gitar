@@ -89,52 +89,49 @@ class JamController extends Controller
      */
     public function update(Request $request, $id): RedirectResponse
     {
-        //validate form
+        // Validasi form
         $request->validate([
-            'Gambar'         => 'required|image|mimes:jpeg,jpg,png|max:2048',
-            'Merek'         => 'required|min:1',
-            'Nama'   => 'required|min:1',
-            'Stok'         => 'required|numeric',
-            'Harga'         => 'required|integer|min:0'
+            'Gambar' => 'nullable|image|mimes:jpeg,jpg,png|max:2048', // Jadikan 'Gambar' opsional saat pembaruan
+            'Merek' => 'required|min:1',
+            'Nama' => 'required|min:1',
+            'Stok' => 'required|numeric',
+            'Harga' => 'required|integer|min:0'
         ]);
-
-        //get product by ID
+    
+        // Ambil produk berdasarkan ID
         $Jam = Jam::findOrFail($id);
-
-        //check if image is uploaded
-        if ($request->hasFile('image')) {
-
-            //upload new image
+    
+        // Periksa apakah gambar diunggah
+        if ($request->hashFile('Gambar')) {
+            // Unggah gambar baru
             $Gambar = $request->file('Gambar');
             $Gambar->storeAs('public/jams', $Gambar->hashName());
-
-            //delete old image
+    
+            // Hapus gambar lama
             Storage::delete('public/jams/'.$Jam->Gambar);
-
-            //update product with new image
+    
+            // Perbarui produk dengan gambar baru
             $Jam->update([
-                'Gambar'         => 'required|image|mimes:jpeg,jpg,png|max:2048',
-                'Merek'         => 'required|min:1',
-                'Nama'   => 'required|min:1',
-                'Stok'         => 'required|numeric',
-                'Harga'         => 'required|integer|min:0'
-                ]);
-
+                'Gambar' => $Gambar->hashName(),
+                'Merek' => $request->Merek,
+                'Nama' => $request->Nama,
+                'Stok' => $request->Stok,
+                'Harga' => $request->Harga
+            ]);
         } else {
-
-            //update product without image
+            // Perbarui produk tanpa gambar
             $Jam->update([
-                'Merek'         => 'required|min:1',
-                'Nama'   => 'required|min:1',
-                'Stok'         => 'required|numeric',
-                'Harga'         => 'required|integer|min:0'
-                ]);
+                'Merek' => $request->Merek,
+                'Nama' => $request->Nama,
+                'Stok' => $request->Stok,
+                'Harga' => $request->Harga
+            ]);
         }
-
-        //redirect to index
+    
+        // Redirect ke halaman index
         return redirect()->route('Jams.index')->with(['success' => 'Data Berhasil Disimpan!']);
     }
-    
+        
     /**
      * destroy
      *
