@@ -20,11 +20,11 @@
                             @csrf
 
                             <div class="form-group mb-3">
-                                <label for="product_id">Pilih Produk</label>
-                                <select name="product_id" class="form-control" required>
-                                    @foreach($products as $product)
-                                        <option value="{{ $product->id }}">
-                                            {{ $product->title }} (Stok: {{ $product->stock }})
+                                <label for="jam_id">Pilih Jam</label>
+                                <select name="jam_id" class="form-control" required>
+                                    @foreach($jams as $jam)
+                                        <option value="{{ $jam->id }}">
+                                            {{ $jam->Nama }} (Stok: {{ $jam->Stok }})
                                         </option>
                                     @endforeach
                                 </select>

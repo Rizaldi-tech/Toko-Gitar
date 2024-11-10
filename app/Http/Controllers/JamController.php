@@ -150,6 +150,6 @@ class JamController extends Controller
         $Jam->delete();
 
         //redirect to index
-        return redirect()->route('Jams.index')->with(['success' => 'Data Berhasil Disimpan!']);
+        return redirect()->route('dashboard')->with(['success' => 'Data Berhasil Disimpan!']);
     }
 }

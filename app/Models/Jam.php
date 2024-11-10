@@ -16,4 +16,10 @@ class Jam extends Model
         'Stok',
         'Harga'
     ];
+
+    public function transaksis()
+    {
+        return $this->hasMany(Transaksi::class);
+    }
+
 }

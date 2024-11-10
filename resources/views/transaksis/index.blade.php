@@ -15,7 +15,7 @@
         <div class="row">
             <div class="col-md-12">
                 <div>
-                    <h3 class="text-center my-4">Sistem Manajemen Alat Pancing</h3>
+                    <h3 class="text-center my-4">Sistem Manajemen Toko Jam</h3>
                     <h3 class="text-center my-4">Data Transaksi</h3>
 
                     <hr>
@@ -24,12 +24,11 @@
                     <div class="card-body">
                         <a href="{{ route('transaksis.create') }}" class="btn btn-md btn-success mb-3">Tambahkan Transaksi</a>
                         <a href="{{ route('dashboard') }}" class="btn btn-md btn-success mb-3">Kembali ke dashboard</a>
-                        <a href="{{ route('products.index') }}" class="btn btn-md btn-success mb-3">Produk</a>
-                        <a href="{{ route('laporans.index') }}" class="btn btn-md btn-success mb-3">Laporan</a>
                         <table class="table table-bordered">
                             <thead>
                                 <tr>
                                     <th scope="col">Tanggal transaksi</th>
+                                    <th scope="col">Nama jam</th>
                                     <th scope="col">Jumlah barang</th>
                                     <th scope="col">Total pembayaran</th>
                                     <th scope="col" style="width: 20%">Opsi</th>
@@ -39,6 +38,7 @@
                                 @forelse ($transaksis as $transaksi)
                                     <tr>
                                         <td>{{ $transaksi->Tanggal_transaksi }}</td>
+                                        <td>{{ $transaksi->jam->Nama }}</td>
                                         <td>{{ $transaksi->Jumlah_barang }}</td>
                                         <td>{{ "Rp " . number_format($transaksi->Total_pembayaran,2,',','.') }}</td>
                                         <td class="text-center">

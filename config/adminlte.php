@@ -327,12 +327,22 @@ return [
             'icon' => 'fas fa-user',
         ],
         [
+'text' => 'Logout',
+'url' => 'home',
+'icon' => 'fas fa-sign-out-alt',
+        ],
+        [
             'text' => 'Manajemen Toko',
             'icon' => 'fas fa-boxes',
             'submenu' => [
                 [
                     'text' => 'Data Jam',
                     'url' => 'Jams',
+                    'icon' => 'fas fa-list',
+                ],
+                [
+                    'text' => 'Data Transaksi',
+                    'url' => 'transaksis',
                     'icon' => 'fas fa-list',
                 ],
             ],

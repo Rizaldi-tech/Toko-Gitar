@@ -10,16 +10,16 @@ class transaksi extends Model
     use HasFactory;
 
     protected $fillable = [
-        'product_id',
+        'jam_id',
         'Tanggal_transaksi',
         'Nama_pembeli',
         'Jumlah_barang',
         'Total_pembayaran'
     ];
     
-    public function product()
+    public function jam()
     {
-        return $this->belongsTo(Product::class);
+        return $this->belongsTo(Jam::class);
     }
 
 }
