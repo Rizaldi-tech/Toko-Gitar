@@ -17,7 +17,6 @@
             <table class="table table-bordered table-dark">
                 <thead>
                     <tr>
-                        <th scope="col">Gambar</th>
                         <th scope="col">Nama</th>
                         <th scope="col">Harga</th>
                         <th scope="col">Stok</th>
@@ -27,8 +26,6 @@
                 <tbody>
                     @forelse ($Jams as $Jam)
                         <tr>
-                            <td class="text-center">
-                                <img src="{{ asset('storage/'.$Jam->Gambar) }}" class="rounded" style="width: 150px">
                             </td>
                             <td>{{ $Jam->Nama }}</td>
                             <td>{{ "Rp " . number_format($Jam->Harga,2,',','.') }}</td>

@@ -63,8 +63,8 @@ return [
     |
     */
 
-    'logo' => '<b>Admin</b>LTE',
-    'logo_img' => 'vendor/adminlte/dist/img/AdminLTELogo.png',
+    'logo' => '<b>Watch</b>STORE',
+    'logo_img' => 'vendor/adminlte/dist/img/—Pngtree—silver watch fashion watch real_4409105.png',
     'logo_img_class' => 'brand-image img-circle elevation-3',
     'logo_img_xl' => null,
     'logo_img_xl_class' => 'brand-image-xs',
@@ -190,15 +190,15 @@ return [
     |
     */
 
-    'classes_body' => 'dark-mode',
+    'classes_body' => 'lightgray-mode',
     'classes_brand' => '',
     'classes_brand_text' => '',
     'classes_content_wrapper' => '',
     'classes_content_header' => '',
     'classes_content' => '',
-    'classes_sidebar' => 'sidebar-dark-primary',
+    'classes_sidebar' => 'sidebar-white-primary',
     'classes_sidebar_nav' => '',
-    'classes_topnav' => 'navbar-dark navbar-primary',
+    'classes_topnav' => 'navbar-white navbar-primary',
     'classes_topnav_nav' => 'navbar-expand',
     'classes_topnav_container' => 'container',
 

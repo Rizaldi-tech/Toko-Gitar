@@ -102,7 +102,7 @@ class JamController extends Controller
         $Jam = Jam::findOrFail($id);
     
         // Periksa apakah gambar diunggah
-        if ($request->hashFile('Gambar')) {
+        if ($request->hasFile('Gambar')) {
             // Unggah gambar baru
             $Gambar = $request->file('Gambar');
             $Gambar->storeAs('public/jams', $Gambar->hashName());

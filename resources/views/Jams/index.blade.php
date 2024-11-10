@@ -9,7 +9,7 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
 
 </head>
-<body style="background: lightgray">
+<body style="background: white">
 
     <div class="container mt-5">
         <div class="row">
