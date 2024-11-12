@@ -10,6 +10,7 @@ Route::get('/', function () {
 
 Route::resource('/Jams', \App\Http\Controllers\JamController::class);
 Route::resource('/transaksis', \App\Http\Controllers\TransaksiController::class);
+Route::resource('/guitars', \App\Http\Controllers\GuitarController::class);
 Route::get('/dashboard',  [DashboardController::class, 'index'])->name('dashboard');
 Route::get('/home',  [UserController::class, 'index'])->name('home');
 

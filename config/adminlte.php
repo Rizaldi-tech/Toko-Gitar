@@ -63,8 +63,8 @@ return [
     |
     */
 
-    'logo' => '<b>Watch</b>STORE',
-    'logo_img' => 'vendor/adminlte/dist/img/—Pngtree—silver watch fashion watch real_4409105.png',
+    'logo' => '<b>Guitar</b>STORE',
+    'logo_img' => 'vendor/adminlte/dist/img/AdminLTELogo.png',
     'logo_img_class' => 'brand-image img-circle elevation-3',
     'logo_img_xl' => null,
     'logo_img_xl_class' => 'brand-image-xs',
@@ -322,27 +322,17 @@ return [
         ],
         ['header' => 'Fitur'],
         [
-            'text' => 'Profile',
-            'url' => 'profile',
-            'icon' => 'fas fa-user',
-        ],
-        [
-'text' => 'Logout',
-'url' => 'home',
-'icon' => 'fas fa-sign-out-alt',
+            'url' => 'home',
+            'icon' => 'fas fa-sign-out-alt',
+            'text' => 'Logout',
         ],
         [
             'text' => 'Manajemen Toko',
             'icon' => 'fas fa-boxes',
             'submenu' => [
                 [
-                    'text' => 'Data Jam',
-                    'url' => 'Jams',
-                    'icon' => 'fas fa-list',
-                ],
-                [
-                    'text' => 'Data Transaksi',
-                    'url' => 'transaksis',
+                    'text' => 'Data Gitar',
+                    'url' => 'guitars',
                     'icon' => 'fas fa-list',
                 ],
             ],
